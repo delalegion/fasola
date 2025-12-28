@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasola Wrzawska - Stowarzyszenie Producentów</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            font-family: "Rethink Sans", sans-serif;
+            font-optical-sizing: auto;
+        }
+        h1, h2, h3, h4, h5, h6, p {
+            font-family: "Rethink Sans", sans-serif;
+        }
+        .bean-gradient {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bean.webp');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="text-gray-800 font-sans">
+
+    <!-- Nawigacja -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-green-700">Fasola Wrzawska</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-medium">
+                        <a href="#o-nas" class="hover:text-green-600 transition">O nas</a>
+                        <a href="#aktualnosci" class="hover:text-green-600 transition">Aktualności</a>
+                        <a href="#statut" class="hover:text-green-600 transition">Statut</a>
+                        <a href="#zarzad" class="hover:text-green-600 transition">Zarząd</a>
+                        <a href="#galeria" class="hover:text-green-600 transition">Galeria</a>
+                        <a href="#kontakt" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Kontakt</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-green-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-2">
+            <a href="#o-nas" class="block py-2 hover:text-green-600">O nas</a>
+            <a href="#aktualnosci" class="block py-2 hover:text-green-600">Aktualności</a>
+            <a href="#statut" class="block py-2 hover:text-green-600">Statut</a>
+            <a href="#zarzad" class="block py-2 hover:text-green-600">Zarząd</a>
+            <a href="#galeria" class="block py-2 hover:text-green-600">Galeria</a>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header class="bean-gradient h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-lg">Piękny Jaś z Wrzaw</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 font-light">Stowarzyszenie Producentów Fasoli Tycznej – Tradycja, Smak i Najwyższa Jakość.</p>
+            <a href="#o-nas" class="bg-white text-green-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition shadow-xl">Poznaj naszą historię</a>
+        </div>
+    </header>
+
+    <!-- O firmie / Stowarzyszeniu -->
+    <section id="o-nas" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 underline decoration-green-500 decoration-4 underline-offset-8">O Stowarzyszeniu</h2>
+                <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                    Stowarzyszenie Producentów Fasoli Tycznej „Piękny Jaś” z siedzibą we Wrzawach dba o zachowanie unikalnego charakteru uprawy naszej regionalnej dumy. 
+                </p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    Naszą misją jest wspieranie lokalnych rolników, promocja zdrowej żywności oraz dbanie o to, aby na stoły trafiała fasola wyłącznie najwyższej kategorii, uprawiana zgodnie z tradycyjnymi metodami.
+                </p>
+                <div class="flex space-x-4">
+                    <div class="bg-green-100 p-4 rounded-lg text-center w-1/2">
+                        <span class="block text-3xl font-bold text-green-700">100%</span>
+                        <span class="text-sm text-green-800 uppercase font-semibold">Naturalna</span>
+                    </div>
+                    <div class="bg-green-100 p-4 rounded-lg text-center w-1/2">
+                        <span class="block text-3xl font-bold text-green-700">Wrzawy, PL</span>
+                        <span class="text-sm text-green-800 uppercase font-semibold">Pochodzenie</span>
+                    </div>
+                </div>
+                <p class="text-xl font-bold text-gray-900 mb-6 underline decoration-green-500 decoration-4 underline-offset-8 mt-12">
+                    Dane stowarzyszenia
+                </p>
+                <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                    Postanowieniem Sądu Rejonowego w Rzeszowie, XII wydział gospodarczy Krajowego Rejestru Sądowego z dnia 10.07.2007r. wpisano Stowarzyszenie Producentów Fasoli Tycznej „PIĘKNY JAŚ” we Wrzawach do KRS podnumerem <b>284532</b>
+                    <br />
+                    <br />
+                    Numer Identyfikacji Podatkowej <b>8672153990</b> REGON <b>180250102</b>
+                </p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+                <img src="bean.webp" alt="Uprawa fasoli" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Aktualności -->
+    <section id="aktualnosci" class="py-20 bg-green-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Aktualności</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Artykuł 1 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="ak-1.jpg" alt="News" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <a href="aktualnosc-1.html" class="p-6 flex flex-col">
+                        <span class="text-sm text-green-600 font-semibold uppercase">Grudzień 2026</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Stacja pogodowa i urządzenia do pomiaru gleby</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Stacja pogodowa i urządzenia do pomiaru gleby i wilgotności materiałów sypkich. Sfinansowana przez...</p>
+                        <div class="inline-block font-bold text-green-700 hover:text-green-900">Czytaj więcej &rarr;</div>
+                    </a>
+                </article>
+
+                <!-- Artykuł 2 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="ar-1.jpg" alt="News" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <a href="aktualnosc-1.html" class="p-6 flex flex-col">
+                        <span class="text-sm text-green-600 font-semibold uppercase">Grudzień 2026</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Cykl szkoleń dla rolników i członków stowarzyszeń</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">W dniach 19.11.2025 – 23.11.2025 – 26.11.2025 – 27.11.2025 w budynku Domu Kultury we Wrzawach...</p>
+                        <div class="inline-block font-bold text-green-700 hover:text-green-900">Czytaj więcej &rarr;</div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skład Zarządu -->
+    <section id="zarzad" class="py-24 max-w-7xl mx-auto px-4 flex flex-col gap-20">
+        <h2 class="text-3xl font-bold text-center">Zarząd Stowarzyszenia</h2>
+        <div class="flex flex-col gap-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
+                <div>
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-green-500 p-1">
+                        <img src="https://ui-avatars.com/api/?name=Waclaw+Pyrkosz&background=16a34a" class="rounded-full w-full h-full shadow-inner">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Wacław Grzegorz Pyrkosz</h4>
+                    <p class="text-green-600 font-medium">Przewodniczący</p>
+                </div>
+                <div>
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-green-500 p-1">
+                        <img src="https://ui-avatars.com/api/?name=Marek+Bartoszek&background=16a34a" class="rounded-full w-full h-full shadow-inner">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Marek Bartoszek</h4>
+                    <p class="text-green-600 font-medium">Wiceprzewodniczący</p>
+                </div>
+                <div>
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-green-500 p-1">
+                        <img src="https://ui-avatars.com/api/?name=Anna+Halik&background=16a34a" class="rounded-full w-full h-full shadow-inner">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Anna Halik Fuc</h4>
+                    <p class="text-green-600 font-medium">Skarbnik</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 text-center">
+                <div>
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-green-500 p-1">
+                        <img src="https://ui-avatars.com/api/?name=Leszek+Kawalec&background=16a34a" class="rounded-full w-full h-full shadow-inner">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Leszek Józef Kawalec</h4>
+                    <p class="text-green-600 font-medium">Członek zarządu</p>
+                </div>
+                <div>
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-green-500 p-1">
+                        <img src="https://ui-avatars.com/api/?name=Waldemar+Praratk&background=16a34a" class="rounded-full w-full h-full shadow-inner">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Waldemar Stanisław Prarat</h4>
+                    <p class="text-green-600 font-medium">Sekretarz</p>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold text-center">Komisja rewizyjna</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 text-center">
+                <div>
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-green-500 p-1">
+                        <img src="https://ui-avatars.com/api/?name=Waclaw+Pyrkosz&background=16a34a" class="rounded-full w-full h-full shadow-inner">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Sylwia Perła</h4>
+                </div>
+                <div>
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-green-500 p-1">
+                        <img src="https://ui-avatars.com/api/?name=Marek+Bartoszek&background=16a34a" class="rounded-full w-full h-full shadow-inner">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Ryszard Jan Fyda</h4>
+                </div>
+            </div>
+    </section>
+
+<!-- Sekcja Statut -->
+<section id="statut" class="py-20 bg-slate-100">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Statut Stowarzyszenia</h2>
+            <p class="text-gray-600">Pełna treść dokumentu regulującego działalność Stowarzyszenia Producentów Fasoli we Wrzawach.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+            <!-- Nagłówek statutu zawsze widoczny -->
+            <div class="p-8 text-center bg-white">
+                <h3 class="text-2xl font-extrabold text-green-800 uppercase tracking-tight">Statut</h3>
+                <p class="font-bold text-gray-700 mt-2">Stowarzyszenia Producentów Fasoli we Wrzawach</p>
+            </div>
+
+            <!-- Kontener z pełną treścią (ukryty domyślnie) -->
+            <div id="statut-content" class="hidden px-8 md:px-16 pb-12 text-gray-800 leading-relaxed border-t pt-10 text-justify">
+                
+                <!-- Rozdział I -->
+                <div class="mb-12">
+                    <h4 class="text-xl font-bold text-green-700 border-b-2 border-green-100 pb-2 mb-6">Rozdział I: I. Nazwa, siedziba, teren działania i charakter prawny.</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold mb-2">§1</p>
+                            <p>Stowarzyszenie nosi nazwę Stowarzyszenie Producentów Fasoli Tycznej "Piękny Jaś" we Wrzawach zwane w dalszej treści Stowarzyszeniem, które jest niezależną, samorządną, społeczną organizacją rolników o celach nie zarobkowych zajmujących się produkcją fasoli.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§2</p>
+                            <p>Siedzibą Stowarzyszenia jest miejscowość Wrzawy i zrzesza ono producentów fasoli z gmin Górzyce, Zaleszany i Radomyśl nad Sanem a terenem działania Stowarzyszenia jest obszar całego kraju oraz zagranica.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§3</p>
+                            <p>1. Stowarzyszenie działa na podstawie niniejszego statutu.</p>
+                            <p>2. Stowarzyszenie posiada osobowość prawną.</p>
+                            <p>3. Podstawą działania Stowarzyszenia jest ustawa z dnia 7 kwietnia 1989 roku Prawo o Stowarzyszeniach (Dz. U z 2001 r Nr79, poz. 855 ze zmianami).</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§4</p>
+                            <p>Stowarzyszenie może być członkiem innych organizacji o podobnym celu działania.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§5</p>
+                            <p>1. Czas działania Stowarzyszenia jest nieograniczony.</p>
+                            <p>2. Działalność Stowarzyszenia opiera się na pracy społecznej członków. Do prowadzenia swych spraw może ono zatrudnić pracowników.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rozdział II -->
+                <div class="mb-12">
+                    <h4 class="text-xl font-bold text-green-700 border-b-2 border-green-100 pb-2 mb-6">Rozdział II: II. Cele stowarzyszenia i sposoby działania</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold mb-2">§6</p>
+                            <p>Podstawowym celem Stowarzyszenia jest działanie na rzecz dostosowania produkcji fasoli do warunków rynkowych, poprawy efektywności gospodarowania, planowania produkcji z uwzględnieniem jej ilości i jakości, koncentracji podaży oraz organizowania sprzedaży a także ochrony środowiska naturalnego.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§7</p>
+                            <p>Cel wymieniony w § 6 Stowarzyszenie realizuje poprzez:</p>
+                            <ul class="space-y-2 mt-3">
+                                <li>1). reprezentowanie interesów ekonomicznych członków wobec organów władzy państwowej i samorządowej oraz podmiotów gospodarczych,</li>
+                                <li>2). udział w negocjacjach cenowych z organizacjami skupującymi,</li>
+                                <li>3). pogłębianie wiedzy fachowej wśród członków poprzez organizowanie i prowadzenie doradztwa z instytucjami zajmującymi się doradztwem w zakresie produkcji fasoli,</li>
+                                <li>4). współdziałanie w organizowaniu zaopatrzenia członków w fasolę i wysokiej jakości, sprzęt i inne środki produkcji,</li>
+                                <li>5). pomoc w uzyskaniu przez członków kredytów na inwestycje związane z produkcją oraz przygotowaniem do sprzedaży fasoli,</li>
+                                <li>6). prowadzenie działalności gospodarczej w zakresie przechowalnictwa - budowa przechowalni, standaryzacji i konfekcjonowania z tym, że dochód z tej działalności winien być przeznaczony w całości na realizację celów statutowych,</li>
+                                <li>7). doskonalenie umiejętności marketingowych oraz współpracy producentów,</li>
+                                <li>8). organizowanie samopomocy wśród członków na zasadach określonych przez Walne Zgromadzenie.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rozdział III -->
+                <div class="mb-12">
+                    <h4 class="text-xl font-bold text-green-700 border-b-2 border-green-100 pb-2 mb-6">Rozdział III: Członkowie, ich prawa i obowiązki</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold mb-2">§8</p>
+                            <p>1. Członkowie Stowarzyszenia dzielą się na zwyczajnych i wspierających.</p>
+                            <p>2. Członkami zwyczajnymi Stowarzyszenia mogą być osoby pełnoletnie - obywatele polscy mający stałe miejsce zamieszkania na terenie działania Stowarzyszenia, które posiadają gospodarstwo rolne lub prowadzą działalność rolniczą w zakresie działów specjalnych produkcji rolnej, popierają cele Stowarzyszenia oraz deklarują i dają rękojmię czynnego uczestnictwa w realizacji tych celów.</p>
+                            <p>3. Przyjęcia na członka stowarzyszenia dokonuje zarząd po wypełnieniu i podpisaniu deklaracji oraz wpłaceniu wpisowego.</p>
+                            <p>4. O przyjęciu nowych członków Stowarzyszenia decyduje Zarząd w formie uchwały na podstawie pisemnej deklaracji kandydata, przy czym minimalny okres członkostwa nie może być krótszy niż trzy pełne lata obrachunkowe od dnia wydania decyzji administracyjnej wojewody o wpisie Stowarzyszenia do rejestru grup. Od odmowy przyjęcia w poczet nowych członków zainteresowanym przysługuje prawo odwołania się do Walnego Zgromadzenia Członków w terminie 1 miesiąca od daty doręczenia uchwały. Uchwała Walnego Zgromadzenia Członków jest ostateczna.</p>
+                            <p>5. Osoby prawne mogą być jedynie członkami wspierającymi Stowarzyszenia.</p>
+                            <p>6. Członkami wspierającymi Stowarzyszenia może być osoba fizyczna lub prawna, bez względu na jej miejsce zamieszkania i siedzibę w kraju lub za granicą, która za swą zgodą zostanie przyjęta do Stowarzyszenia przez Zarząd.</p>
+                            <p>7. Członek wspierający Stowarzyszenia deklaruje pomoc w realizacji jego celów oraz wsparcie materialne i finansowe.</p>
+                            <p>8. Osoba prawna działa w Stowarzyszeniu poprzez swych przedstawicieli.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§9</p>
+                            <p>1. Członek zwyczajny ma prawo:</p>
+                            <p class="ml-4">1). brać udział w zebraniu Stowarzyszenia z głosem decydującym,</p>
+                            <p class="ml-4">2). wybierać i być wybierany do organów Stowarzyszenia,</p>
+                            <p class="ml-4">3). brać udział w bieżących pracach Stowarzyszenia,</p>
+                            <p class="ml-4">4). korzystać w ramach Stowarzyszenia z doradztwa fachowego, pomocy prawnej i dostępu do informacji w tym w szczególności dotyczącej działalności Stowarzyszenia.</p>
+                            <p>2. Członkowie wspierający korzystają z praw wymienionych w ust. 1 pkt. 3 i 4. Biorą udział w posiedzeniu władz Stowarzyszenia z głosem doradczym.</p>
+                            <p>3. Członkowie wspierający uczestniczą w pracach Stowarzyszenia poprzez umocowanych przedstawicieli.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§10</p>
+                            <p>Członek zwyczajny i wspierający jest obowiązany:</p>
+                            <p>1). stosować się do postanowień Statutu Stowarzyszenia oraz uchwał i zarządzeń organów Stowarzyszenia pod rygorem sankcji ustalonych w oddzielnym regulaminie,</p>
+                            <p>2). brać czynny udział w pracach Stowarzyszenia i dążyć do realizowania jego celów,</p>
+                            <p>3). opłacać składkę członkowską, i wpisowe,</p>
+                            <p>4). przynależeć tylko do jednego Stowarzyszenia Producentów Fasoli.</p>
+                            <p>5). Członkowie stowarzyszenia będą dążyć do wspólnej sprzedaży wyprodukowanej fasoli, dla których zostało utworzone Stowarzyszenie oraz ustalać z Zarządem odstępstwa od tej zasady,</p>
+                            <p>6). dostarczać Zarządowi na piśmie informacje dotyczące wielkości sprzedaży i cen uzyskiwanych za produkty, z uwagi na które Stowarzyszenie zostało powołane a są sprzedawane poza Stowarzyszeniem.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§11</p>
+                            <p>1. Ustanie członkostwa w Stowarzyszeniu następuje na skutek:</p>
+                            <p class="ml-4">a). śmierci</p>
+                            <p class="ml-4">b). wystąpienia ze Stowarzyszenia zgłoszonego przez członka w formie oświadczenia pisemnego złożonego Zarządowi co najmniej 12 miesięcy przed końcem roku obrachunkowego. Minimalny okres członkostwa nie może być jednak krótszy niż trzy pełne lata obrachunkowe od dnia wydania decyzji administracyjnej wojewody o wpisie Stowarzyszenia do rejestru grup,</p>
+                            <p class="ml-4">c). wykluczenia przez Walne Zgromadzenie na wniosek Zarządu Stowarzyszenia lub Komisji Rewizyjnej z powodu:</p>
+                            <p class="ml-8">-- nieprzestrzegania przez członka postanowień statutu lub uchwał Stowarzyszenia,</p>
+                            <p class="ml-8">-- działanie na szkodę Stowarzyszenia lub jego członków,</p>
+                            <p class="ml-8">-- zalegania z opłatą składek członkowskich przez okres co najmniej 12-tu miesięcy</p>
+                            <p>2. Od decyzji Walnego Zgromadzenia o wykluczeniu nie przysługuje członkowi odwołanie.</p>
+                            <p>3. Ustanie członkostwa następuje z dniem śmierci, wystąpienia lub wykluczenia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rozdział IV -->
+                <div class="mb-12">
+                    <h4 class="text-xl font-bold text-green-700 border-b-2 border-green-100 pb-2 mb-6">Rozdział IV: Organizacja Stowarzyszenia</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold mb-2">§12</p>
+                            <p>1. Organami Stowarzyszenia są:</p>
+                            <p class="ml-4">1). Walne Zgromadzenie Członków zwane dalej Walnym Zgromadzeniem.</p>
+                            <p class="ml-4">2). Zarząd Stowarzyszenia zwany dalej Zarządem.</p>
+                            <p class="ml-4">3). Komisja Rewizyjna.</p>
+                            <p>2. Kadencja władz wybieralnych Stowarzyszenia trwa 4 lata.</p>
+                            <p>3. W razie zdekompletowania składu władz Stowarzyszenia w czasie trwania kadencji, władzom tym przysługuje prawo uzupełnienia brakujących członków, z tym, że liczba członków uzupełnionych nie może przekroczyć 1/3 członków pochodzących z wyboru.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§13</p>
+                            <p>1. Walne Zgromadzenie jest najwyższym organem Stowarzyszenia.</p>
+                            <p>2. Walne Zgromadzenie może być zwyczajne i nadzwyczajne.</p>
+                            <p>3. Zwyczajne Walne Zgromadzenie zwołuje Zarząd przynajmniej raz w roku w terminie nie dłuższym jak 6 miesięcy po zakończeniu roku kalendarzowego.</p>
+                            <p>4. Nadzwyczajne Walne Zgromadzenie może być zwołane na wniosek:</p>
+                            <p class="ml-4">1) Przynajmniej 10 członków,</p>
+                            <p class="ml-4">2) Zarządu,</p>
+                            <p class="ml-4">3) Komisji Rewizyjnej.</p>
+                            <p>5. Nadzwyczajne Walne Zgromadzenie winno być zwołane w ciągu sześciu tygodni po zgłoszeniu wniosku spełniającego w/w wymagania.</p>
+                            <p>6. Żądający zwołania Nadzwyczajnego Walnego Zgromadzenia powinni równocześnie podać sprawy, które mają być zamieszczone w porządku obrad.</p>
+                            <p>7. O terminie i porządku obrad Walnego Zgromadzenia członkowie powinni być zawiadomieni na piśmie z 14-dniowym wyprzedzeniem.</p>
+                            <p>8. W Walnym Zgromadzeniu mają prawo brać udział wszyscy członkowie Stowarzyszenia.</p>
+                            <p>9. Walne Zgromadzenie jest uprawnione do podejmowania ważnych uchwał jeżeli bierze w nim udział co najmniej połowa członków.</p>
+                            <p>10. Uchwały Walnego Zgromadzenia podejmowane są zwykłą większością głosów, o ile niniejszy statut nie stanowi inaczej. Do ważności uchwały uwzględnia się głosy za i przeciw uchwale.</p>
+                            <p>11. Obrady odbywają się zgodnie z regulaminem obrad uchwalonym każdorazowo przez Zgromadzenie.</p>
+                            <p>12. Jeżeli Zwyczajne Walne Zgromadzenie nie odbędzie się z przyczyn określonych w ust. 9, ponowne jego zwołanie winno nastąpić w ciągu 14 dni, jest ono zdolne do podejmowania uchwał, gdy udział w nim bierze, co najmniej 1/4 członków.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§14</p>
+                            <p>Do kompetencji Walnego Zgromadzenia należy:</p>
+                            <p>1). uchwalanie statutu oraz dokonywanie jego zmian,</p>
+                            <p>2). wybór i odwoływanie członków Zarządu i Komisji Rewizyjnej,</p>
+                            <p>3). zatwierdzanie programu działalności Stowarzyszenia,</p>
+                            <p>4). zatwierdzanie sprawozdań i bilansów przedkładanych przez Zarząd i Komisję Rewizyjną.</p>
+                            <p>5). uchwalanie budżetu Stowarzyszenia,</p>
+                            <p>6). uchwalanie wysokości składek członkowskich i wpisowego,</p>
+                            <p>7). podejmowanie decyzji o przystąpieniu lub wystąpieniu ze struktur innych związków i organizacji gospodarczych,</p>
+                            <p>8). udzielanie absolutorium Zarządowi w sposób wskazany w regulaminie Walnego Zgromadzenia,</p>
+                            <p>9). rozpatrywanie wniosków o wykluczeniu członków Stowarzyszenia,</p>
+                            <p>10). uchwalenie regulaminów Zarządu i Komisji Rewizyjnej,</p>
+                            <p>11). ustalanie struktury organizacyjnej i zatrudnienia.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§15</p>
+                            <p>1. Zarząd składa się z 5 do 7 członków w tym Przewodniczącego i dwóch Wice Przewodniczących oraz Sekretarza.</p>
+                            <p>2. Kadencja członków Zarządu trwa cztery lata.</p>
+                            <p>3. Posiedzenia Zarządu zwołuje Sekretarz.</p>
+                            <p>4. Posiedzenie Zarządu powinno odbywać się przynajmniej raz na kwartał.</p>
+                            <p>5. Nadzwyczajne posiedzenie Zarządu może być zwołane w ciągu 14 dni na żądanie przewodniczącego Komisji Rewizyjnej.</p>
+                            <p>6. Do podjęcia uchwał przez Zarząd konieczna jest obecność na zebraniu przynajmniej 1/2 składu Zarządu.</p>
+                            <p>7. Uchwały Zarządu zapadają zwykłą większością głosów. W przypadku równowagi głosów decyduje głos tego członka Zarządu, który przewodniczy danemu posiedzeniu.</p>
+                            <p>8. Zarząd działa kolegialnie na podstawie regulaminu uchwalonego przez Walne Zgromadzenie.</p>
+                            <p>9. Do reprezentowania na zewnątrz, zawierania umów, składania oświadczeń woli i zaciągania zobowiązań majątkowych w imieniu stowarzyszenia uprawnieni są: Przewodniczący oraz jeden z dwóch Wice - Przewodniczących</p>
+                            <p>10. Zarząd może korzystać z pomocy fachowców, grona naukowców celu uzyskania merytorycznego wsparcia w działalności Stowarzyszenia</p>
+                            <p>11. Członek Zarządu może być odwołany przez Walne Zgromadzenie przed upływem kadencji ilością 2/3 głosów.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§16</p>
+                            <p>Do kompetencji Zarządu należy:</p>
+                            <p>1). kierowanie działalnością Stowarzyszenia zgodnie ze statutem i uchwałami Walnego Zgromadzenia,</p>
+                            <p>2). przedkładanie Walnemu Zgromadzeniu sprawozdań z działalności Stowarzyszenia,</p>
+                            <p>3). zwoływanie Walnego Zgromadzenia,</p>
+                            <p>4). powoływanie i odwoływanie osoby prowadzącej sprawy Stowarzyszenia,</p>
+                            <p>5). przyjmowanie i ocena okresowych sprawozdań przedkładanych przez osobę prowadzącą sprawy Stowarzyszenia,</p>
+                            <p>6). zatrudnianie i zwalnianie pracowników,</p>
+                            <p>7). zarządzanie majątkiem i finansami Stowarzyszenia w ramach zatwierdzonego budżetu</p>
+                            <p>8). rozstrzyganie sporów między członkami Stowarzyszenia wynikłych na tle realizacji zadań statutowych według trybu określonego w zadaniach przez Walne Zgromadzenie w regulaminie Stowarzyszenia.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§17</p>
+                            <p>Do kompetencji prowadzącego sprawy Stowarzyszenia należy między innymi:</p>
+                            <p>1). prowadzenie bieżących spraw Stowarzyszenia,</p>
+                            <p>2). wykonywanie uchwał Walnego Zgromadzenia i Zarządu,</p>
+                            <p>3). opracowywanie projektów planów działalności Stowarzyszenia i sposobów ich realizacji na zlecenie Zarządu,</p>
+                            <p>4). prowadzenie ewidencji członków,</p>
+                            <p>5). wykonywanie wszelkich innych czynności zleconych przez Zarząd.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§18</p>
+                            <p>Prowadzący sprawy Stowarzyszenia realizuje zadania określone przez Zarząd.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§19</p>
+                            <p>1. Komisja Rewizyjna składa się z 3 członków wybieranych przez Walne Zgromadzenie.</p>
+                            <p>2. Komisja wybiera spośród siebie przewodniczącego.</p>
+                            <p>3. Zebranie Komisji Rewizyjnej zwołuje jej przewodniczący co najmniej raz na kwartał.</p>
+                            <p>4. Wnioski Komisji Rewizyjnej, czynności kontrole i uchwały podejmowane są zwykłą większością głosów w pełnym trzyosobowym składzie.</p>
+                            <p>5. Kadencja Komisji Rewizyjnej trwa 4 lata.</p>
+                            <p>6. Członkowie Komisji Rewizyjnej mają prawo uczestniczyć w posiedzeniach Zarządu z głosem doradczym</p>
+                            <p>7. Szczegółowy zakres działania Komisji rewizyjnej określa regulamin o którym mowa w § 14 ust. 10.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§20</p>
+                            <p>Do kompetencji Komisji Rewizyjnej należy między innymi:</p>
+                            <p>1). stała kontrola całokształtu Stowarzyszenia pod względem celowości, prawidłowości oraz zgodności z przepisami prawa, postanowieniami statutu i uchwałami Walnego Zgromadzenia,</p>
+                            <p>2). zgłaszanie uwag i wniosków organom Stowarzyszenia i prowadzącemu sprawy Stowarzyszenia.</p>
+                            <p>3). składanie Walnemu Zgromadzeniu sprawozdań finansowych i stawianie wniosków o udzielenie absolutorium Zarządowi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rozdział V -->
+                <div class="mb-12">
+                    <h4 class="text-xl font-bold text-green-700 border-b-2 border-green-100 pb-2 mb-6">Rozdział V: Fundusze i majątek własny Stowarzyszenia.</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold mb-2">§21</p>
+                            <p>Fundusze Stowarzyszenia powstają z:</p>
+                            <p>1). składek członkowskich,</p>
+                            <p>2). zapisów, darowizn, subwencji i dotacji,</p>
+                            <p>3). prowadzonej działalności.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§22</p>
+                            <p>Walne Zgromadzenie może tworzyć fundusze specjalne z przeznaczeniem ich na określone cele oraz ustala regulaminy wykorzystania tych funduszy.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§23</p>
+                            <p>1. Stowarzyszenie może posiadać własny majątek ruchomy i nieruchomy.</p>
+                            <p>2. Majątek Stowarzyszenia może być używany wyłącznie do realizacji celów statutowych.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§24</p>
+                            <p>1. Majątkiem i funduszami Stowarzyszenia zarządza Zarząd Stowarzyszenia poprzez upoważnionych członków Zarządu w ramach zatwierdzonego budżetu i przyjętego programu działania.</p>
+                            <p>2. Nabycie, zbycie lub obciążenie nieruchomości możliwe jest tylko za zgodą Walnego Zgromadzenia.</p>
+                            <p>3. Oświadczenia woli w zakresie praw i zobowiązań finansowych składają w imieniu Stowarzyszenia dwaj członkowie Zarządu lub członek Zarządu i upoważniony przez Zarząd pełnomocnik.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rozdział VI -->
+                <div class="mb-12">
+                    <h4 class="text-xl font-bold text-green-700 border-b-2 border-green-100 pb-2 mb-6">Rozdział VI: Zmiany statutu i rozwiązanie Stowarzyszenia.</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold mb-2">§25</p>
+                            <p>Niniejszy statut może być zmieniony przez Walne Zgromadzenie większością 2/3 głosów w obecności co najmniej połowy członków uprawnionych do głosowania.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold mb-2">§26</p>
+                            <p>1. Rozwiązanie Stowarzyszenia może nastąpić na podstawie uchwały podjętej na Walnym Zgromadzeniu ilością 2/3 członków uprawnionych do głosowania.</p>
+                            <p>2. W razie podjęcia uchwały w przedmiocie rozwiązania Stowarzyszenia, Walne Zgromadzenie powołuje Komisję Likwidacyjną.</p>
+                            <p>3. Majątek pozostały po likwidacji przechodzi na cele określone w uchwale Walnego Zgromadzenia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rozdział VII -->
+                <div class="mb-12">
+                    <h4 class="text-xl font-bold text-green-700 border-b-2 border-green-100 pb-2 mb-6">Rozdział VII: Postanowienia końcowe i przejściowe</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold mb-2">§27</p>
+                            <p>Stowarzyszenie używa pieczęci okrągłej i podłużnej z napisem: Stowarzyszenie Producentów Fasoli Tycznej "Piękny Jaś" we Wrzawach.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Przycisk sterujący -->
+            <div class="p-8 bg-gray-50 text-center border-t">
+                <button id="toggle-statut" class="bg-green-700 hover:bg-green-800 text-white font-bold py-4 px-12 rounded-full shadow-lg transition-all transform hover:scale-105 active:scale-95">
+                    Rozwiń pełny statut
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sekcja Decyzja Ministra -->
+<section id="decyzja" class="py-20 bg-green-50">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Decyzja Ministra Rolnictwa i Rozwoju Wsi</h2>
+            <p class="text-gray-600">Oficjalne potwierdzenie rejestracji nazwy „Fasola Wrzawska” jako Chroniona Nazwa Pochodzenia.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+            <!-- Skrócony widok / Podgląd dokumentu -->
+            <div class="p-8 bg-white border-b border-gray-100">
+                <div class="flex flex-col md:flex-row justify-between mb-8">
+                    <div class="text-gray-700 font-serif">
+                        <p class="font-bold uppercase">Minister Rolnictwa i Rozwoju Wsi</p>
+                        <p>Wojciech Mojzesowicz</p>
+                    </div>
+                    <div class="text-right text-gray-600 mt-4 md:mt-0">
+                        <p>Warszawa, dnia września 2007 r.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center mb-6"><img src="orzel.jpg" alt="Orzeł, Godło Polski" width="77" height="83" /></div>
+                <h3 class="text-2xl font-bold text-center text-gray-900 underline decoration-1 underline-offset-8">DECYZJA</h3>
+            </div>
+
+            <!-- Kontener z pełną treścią (ukryty domyślnie) -->
+            <div id="decyzja-content" class="hidden px-8 md:px-16 pb-12 text-gray-800 leading-relaxed pt-10 font-serif">
+                
+                <div class="space-y-6 text-justify">
+                    <p>
+                        Na podstawie art. 104 kodeksu postępowania administracyjnego w związku z art. 19 ust. 1 pkt 1 ustawy z dnia 17 grudnia 2004 r. o rejestracji i ochronie nazw i oznaczeń produktów rolnych i środków spożywczych oraz o produktach tradycyjnych (Dz. U. z 2005 r. Nr 10, poz. 68) po rozpatrzeniu wniosku z dnia 28 czerwca 2007 r. złożonego przez Stowarzyszenie Producentów Fasoli Tycznej "Piękny Jaś" we Wrzawach o rejestrację nazwy "fasola wrzawska" jako chroniona nazwa pochodzenia stwierdzam spełnianie wymagań określonych w rozporządzeniu Rady (WE) nr 51012006 z dnia 20 marca 2006 r. w sprawie ochrony oznaczeń geograficznych i nazw pochodzenia produktów rolnych i środków spożywczych.
+                    </p>
+
+                    <h4 class="font-bold text-center py-4">Uzasadnienie</h4>
+
+                    <p>
+                        Stosownie do art. 19 ust. 1 pkt 1 ustawy z dnia 17 grudnia 2004 r. o rejestracji i ochronie nazw i oznaczeń produktów rolnych i środków spożywczych oraz o produktach tradycyjnych minister właściwy do spraw rynków rolnych wydaje decyzję o stwierdzeniu spełniania wymagań określonych w rozporządzeniu Rady (EWG) nr 2081/92 z dnia 14 lipca 1992 r. w sprawie ochrony oznaczeń geograficznych i nazw pochodzenia produktów rolnych i środków spożywczych. Jednakże ww. rozporządzenie zostało uchylone rozporządzeniem Rady (WE) nr 510/2006 r. w sprawie ochrony oznaczeń geograficznych i nazw pochodzenia produktów rolnych i środków spożywczych, którego artykuł 19 stanowi, że odesłania do uchylonego rozporządzenia traktowane są jako odesłania do rozporządzenia Rady (WE) nr 510/2006 r. w sprawie ochrony oznaczeń geograficznych i nazw pochodzenia produktów rolnych i środków spożywczych.
+                    </p>
+
+                    <p>
+                        Wniosek o rejestrację "fasoli wrzawskiej" jako chroniona nazwa pochodzenia spełnia wymagania określone w rozporządzeniu Rady (WE) 510/2006 z dnia 20 marca 2006 r. przepisach w sprawie ochrony oznaczeń geograficznych i nazw pochodzenia produktów rolnych i środków spożywczych.
+                    </p>
+
+                    <p>
+                        Zgodnie z art. 2 ust. 1 lit a) rozporządzenia Rady (WE) 510/2006 do oznaczenia produktu wykorzystywana jest nazwa określonego miejsca. We wniosku o rejestrację pokazano, w jaki sposób jakość fasoli wrzawskiej związana jest z miejscem pochodzenia a wszystkie etapy jej produkcji odbywają się na określonym obszarze geograficznym. Przedstawione zostały zarówno czynniki naturalne oraz czynniki ludzkie, które mają wpływ na jakość gotowego produktu.
+                    </p>
+
+                    <p>
+                        Stosownie do art. 18 ust. 1 pkt 1 ww. ustawy Rada do Spraw Tradycyjnych i Regionalnych Nazw Produktów Rolnych i Środków Spożywczych na posiedzeniu, które odbyło się w dniu 12 września 2007 r. w Ministerstwie Rolnictwa i Rozwoju Wsi wydała opinię, iż wniosek o rejestrację spełnia wymagania określone w rozporządzeniu Rady (WE) nr 51012006 z dnia 20 marca 2006 r. w sprawie ochrony oznaczeń geograficznych i nazw pochodzenia produktów rolnych i środków spożywczych. W związku z powyższym, należało orzec jak w rozstrzygnięciu.
+                    </p>
+
+                    <p>Decyzja niniejsza jest ostateczna.</p>
+                    <p>Na niniejszą decyzję stronie przysługuje skarga do Wojewódzkiego Sądu Administracyjnego w Warszawie, za pośrednictwem Ministra Rolnictwa i Rozwoju Wsi, w terminie 30 dni od dnia doręczenia niniejszej decyzji.</p>
+
+                    <div class="pt-6 space-y-1">
+                        <p>Otrzymują:</p>
+                        <p>1) Waldemar Prarat, Stowarzyszenie Producentów Fasoli Tycznej "Piękny Jaś" we Wrzawach, Wrzawy 485, 39-432 Gorzyce.</p>
+                        <p>2) Pan Keijo Hyvonen, Head of Unit FA, Dyrekcja Generalna Rolnictwa i Rozwoju Obszarów Wiejskich, Komisja Europejska;</p>
+                    </div>
+
+                    <!-- Druga część dokumentu -->
+                    <div class="mt-12 pt-12 border-t-2 border-dashed border-gray-200">
+                        <h3 class="text-xl font-bold text-center mb-8 uppercase">DECYZJA MINISTERSWTWA ROLNICTWA I ROZWOJU WSI O REJESTRACJI NAZWY „FASOLA WRZAWSKA” JAKO CHRONIONA NAZWA POCHODZENIA</h3>
+                        
+                        <p class="italic mb-6 text-center">Fragment wniosku złożonego w Unii Europejskiej dla rejestracji chronionej nazwy pochodzenia Fasola wrzawska, zatwierdzony przez Ministerstwo Rolnictwa i Rozwoju Wsi</p>
+
+                        <div class="space-y-4">
+                            <p>1. Pod nazwą „Fasola wrzawska” mogą być sprzedawane wyłącznie nasiona fasoli tycznej Piękny Jaś, zaliczanej do fasoli wielokwiatowej (Phaseolus multiflorus). Jest to roślina jednoroczna, pnąca, tyczna, średnio plenna, dość późna. Strąki dojrzewają stopniowo, aż do przymrozków. Strąki niedojrzałe są zielone, w miarę dojrzewania brunatnieją. Strąk dojrzały jest krótki, bardzo szeroki, spłaszczony. Odmiana uprawiana na tzw. suche ziarno.</p>
+                            
+                            <p>2. Ziarna fasoli muszą być bocznie spłaszczone o kształcie nerkowatym, muszą być czyste, całe, zdrowe, dojrzałe, dobrze wykształcone, suche bez zanieczyszczeń, nie wyschnięte, bez otworów spowodowanych przez owady, wolne od niebezpiecznych chorób, nie okazujące jakiegokolwiek pogorszenia lub wzrostu pod wpływem temperatury.</p>
+                            
+                            <p>3. Pod nazwą „Fasola wrzawska” nie można sprzedawać ziaren innych odmian niż określona w pkt. 1, z tolerancją określoną w pkt. 8.</p>
+                            
+                            <p>4. Ziarna fasoli muszą być wolne od obcej materii z tolerancją określoną w pkt. 8.</p>
+                            
+                            <p>5. Nasiona mają błyszczącą okrywę nasienną o jednolitym białym zabarwieniu.</p>
+                            
+                            <p>6. Zapach ziaren musi być charakterystyczny dla „Fasoli wrzawskiej”, przy czym jednocześnie naturalny, swoisty, bez zapachu pleśni, stęchlizny i innych obcych zapachów.</p>
+                            
+                            <p>7. Cechami dyskwalifikującymi całą partię są ziarna zaparzone, ze strąkowcem wewnątrz lub mające pozostałości środków ochrony roślin.</p>
+                            
+                            <div class="pl-4">
+                                <p>8. W stosunku do ziaren przed zapakowaniem stosuje się następującą tolerancję:</p>
+                                <ul class="list-none space-y-1 mt-2">
+                                    <li>a) ziarna połamane (połowa całego ziarna) do 0,1%,</li>
+                                    <li>b) ziarna wyschnięte do 0,3 %,</li>
+                                    <li>c) obca materia do 0,05 % (maksymalna ilość ziemi 0,02 %),</li>
+                                    <li>d) ziarna zbutwiałe i spleśniałe nie więcej niż 0,2%,</li>
+                                    <li>e) zawartość ziaren fasoli o nie jednolitej barwie nie więcej niż 0,6%.</li>
+                                    <li>f) jednakże w sumie ziaren fasoli, które nie spełniają określonych wymagań nie może być więcej niż 1,25 % liczonych wagowo.</li>
+                                </ul>
+                            </div>
+
+                            <p class="font-bold pt-4">Ziarna fasoli są bardzo duże, co powoduje, iż na 100 gram fasoli wchodzi nie więcej niż 50 ziaren.</p>
+                            
+                            <p>9. Wilgotność fasoli nie może być większa niż 18%. „Fasola wrzawska” charakteryzuje się bardzo cienką skórką. Ziarna mają bardzo delikatny, łagodny i właściwy dla „Fasoli wrzawskiej” smak.</p>
+                        </div>
+                    </div>
+                    <img src="pieczatka.jpg" alt="Orzeł, Godło Polski" width="150" height="150" >
+                </div>
+
+            </div>
+
+            <!-- Przycisk sterujący -->
+            <div class="p-8 bg-gray-50 text-center border-t">
+                <button id="toggle-decyzja" class="bg-gray-800 hover:bg-black text-white font-bold py-4 px-12 rounded-full shadow-lg transition-all transform hover:scale-105 active:scale-95">
+                    Rozwiń pełną treść decyzji
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="py-20 max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Galeria Zdjęć</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="fasola1.jpg" alt="Fasola 1" class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+            <img src="fasola2.jpg" alt="Fasola 2" class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+            <img src="fasola3.jpg" alt="Fasola 3" class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+            <img src="fasola4.jpg" alt="Fasola 4" class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+            <img src="fasola5.jpg" alt="Fasola 5" class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+            <img src="fasola6.jpg" alt="Fasola 6" class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+            <img src="fasola7.jpg" alt="Fasola 7" class="rounded-lg shadow hover:opacity-90 cursor-pointer">
+        </div>
+    </section>
+
+    <!-- Stopka i Kontakt -->
+    <footer id="kontakt" class="bg-slate-900 text-gray-300 py-16 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-white text-2xl font-bold mb-6">Fasola Wrzawska</h3>
+                <p class="mb-4">Dbamy o najwyższą jakość tradycyjnej uprawy fasoli "Piękny Jaś".</p>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="#" class="hover:text-green-500"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-green-500"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white text-xl font-bold mb-6">Kontakt</h3>
+                <ul class="space-y-3">
+                    <li>Stowarzyszenie Producentów Fasoli Tycznej „PIĘKNY JAŚ” we Wrzawach</li>
+                    <li><i class="fa-solid fa-location-dot mr-3 text-green-500"></i> Wrzawy 485, 39-432 Gorzyce</li>
+                    <li><i class="fa-solid fa-phone mr-3 text-green-500"></i> +48(015) 83 63935 lub +48(015) 83 63 959 (Dom Kultury Wrzawy)</li>
+                    <li><i class="fa-solid fa-envelope mr-3 text-green-500"></i> spft.wrzawy@op.pl</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white text-xl font-bold mb-6">Dane firmy</h3>
+                <p>NIP: 8672153990</p>
+                <p>REGON: 18025010200000</p>
+                <p>KRS: 0000284532</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-gray-800 mt-12 pt-8 text-center text-sm">
+            <p>&copy; 2025 Fasola Wrzawska - Stowarzyszenie Producentów Fasoli Tycznej. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Skrypty JS -->
+    <script>
+        // Obsługa menu mobilnego
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Obsługa rozwijania statutu
+        const toggleBtn = document.getElementById('toggle-statut');
+        const statutContent = document.getElementById('statut-content');
+
+        toggleBtn.addEventListener('click', () => {
+            if (statutContent.classList.contains('hidden')) {
+                statutContent.classList.remove('hidden');
+                toggleBtn.innerText = 'Zwiń statut';
+            } else {
+                statutContent.classList.add('hidden');
+                toggleBtn.innerText = 'Rozwiń pełny statut';
+                // Przewiń do sekcji po zamknięciu
+                document.getElementById('statut').scrollIntoView();
+            }
+        });
+    </script>
+    <!-- Skrypt obsługujący drugą sekcję -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleDecyzjaBtn = document.getElementById('toggle-decyzja');
+        const decyzjaContent = document.getElementById('decyzja-content');
+
+        if(toggleDecyzjaBtn && decyzjaContent) {
+            toggleDecyzjaBtn.addEventListener('click', () => {
+                const isHidden = decyzjaContent.classList.contains('hidden');
+                
+                if (isHidden) {
+                    decyzjaContent.classList.remove('hidden');
+                    toggleDecyzjaBtn.innerText = 'Zwiń treść decyzji';
+                    setTimeout(() => {
+                        decyzjaContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 50);
+                } else {
+                    decyzjaContent.classList.add('hidden');
+                    toggleDecyzjaBtn.innerText = 'Rozwiń pełną treść decyzji';
+                    document.getElementById('decyzja').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

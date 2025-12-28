@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zbiory Fasoli 2025 - Fasola Wrzawska</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Styl dla płynnego pojawiania się modala */
+        #imageModal {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-active {
+            display: flex !important;
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <nav class="bg-white shadow-sm p-4">
+        <div class="max-w-4xl mx-auto">
+            <a href="index.html" class="text-green-700 font-bold">&larr; Powrót do strony głównej</a>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto my-12 bg-white p-8 md:p-16 shadow-lg rounded-xl">
+        <header class="mb-8">
+            <span class="text-green-600 font-bold uppercase tracking-wider text-sm">Szkolenia</span>
+            <h1 class="text-4xl font-extrabold text-gray-900 mt-2">Cykl szkoleń dla rolników i członków stowarzyszeń</h1>
+            <p class="text-gray-500 mt-4 italic">Opublikowano: 2 grudnia | Autor: Zarząd Stowarzyszenia</p>
+        </header>
+
+        <img src="ar-1.jpg" alt="Zbiory" class="w-full h-96 object-cover rounded-lg mb-8 shadow-md">
+
+        <div class="prose prose-lg text-gray-700 leading-relaxed">
+            <p class="mb-4 text-xl">W dniach 19.11.2025 – 23.11.2025 – 26.11.2025 – 27.11.2025 w budynku Domu Kultury we Wrzawach odbył się cykl szkoleń dla rolników i  członków  stowarzyszeń działających na terenie Gminy Gorzyce
+                Szkolenia organizowane przez Stowarzyszenie Producentów Fasoli Tycznej „Piękny Jaś” we Wrzawach w ramach projektu „ Wrzawska Partycypacja” .
+                Zgodnie z umową 820/1/MMS/2025 planowany jest zakup i montaż stacji pogodowej.
+                Projekt finansowany jest ze środków Narodowego Instytutu Wolności – Centrum Rozwoju Społeczeństwa Obywatelskiego. 
+                W ramach Rządowego Programu Wsparcia Organizacji Pozarządowych 
+                Moc Małych Społeczności</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="ar-1.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-2.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-3.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-4.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-5.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-6.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-8.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-9.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-10.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-11.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-12.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-13.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-14.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-15.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                    <img src="ar-16.jpg" alt="Szkolenie" class="gallery-img rounded-lg shadow hover:opacity-90 cursor-pointer">
+                </div>
+        </div>
+    </article>
+
+    <footer class="text-center py-10 text-gray-500 text-sm">
+        &copy; 2025 Fasola Wrzawska
+    </footer>
+
+       <!-- Modal (Popup na zdjęcia) -->
+       <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/95 opacity-0 flex flex-col items-center justify-center p-4">
+        <!-- Przycisk zamknij -->
+        <button id="closeModal" class="absolute top-5 right-5 text-white text-4xl hover:text-green-400 transition">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <!-- Miejsce na zdjęcie -->
+        <img id="modalImg" src="" alt="Powiększone zdjęcie" class="max-w-full max-h-[85vh] rounded shadow-2xl border-2 border-white/10">
+        
+        <!-- Podpis zdjęcia -->
+        <p id="modalCaption" class="text-white mt-4 text-lg font-medium tracking-wide"></p>
+    </div>
+
+    <!-- Skrypt do obsługi galerii -->
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCaption = document.getElementById('modalCaption');
+        const closeModal = document.getElementById('closeModal');
+        const galleryImages = document.querySelectorAll('.gallery-img');
+
+        // Funkcja otwierania modala
+        console.log(galleryImages)
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.classList.add('modal-active');
+                modalImg.src = img.src;
+                modalCaption.innerText = img.alt;
+                // Blokowanie przewijania strony pod spodem
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Funkcja zamykania modala
+        function hideModal() {
+            modal.classList.remove('modal-active');
+            document.body.style.overflow = 'auto';
+        }
+
+        closeModal.addEventListener('click', hideModal);
+
+        // Zamknij po kliknięciu w tło (poza zdjęciem)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target === modalImg) {
+                // Jeśli chcesz zamykać tylko po kliknięciu w tło, usuń e.target === modalImg
+                if(e.target !== modalImg) hideModal();
+            }
+        });
+
+        // Obsługa klawisza ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") hideModal();
+        });
+    </script>
+</body>
+</html>
